@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: ./docker/local/express/Dockerfile
+    ports:
+      - "5050:5050"
     volumes:
       - /app/node_modules
       - .:/app
