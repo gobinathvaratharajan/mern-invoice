@@ -2,13 +2,13 @@ services:
   api:
     restart: always
     build:
-      context: .
-      dockerfile: ./docker/local/express/Dockerfile
+      context: ./backend
+      dockerfile: ../docker/local/express/Dockerfile
     ports:
       - "5050:5050"
     volumes:
       - /app/node_modules
-      - .:/app
+      - ./backend:/app
     depends_on:
       - mongodb
     environment:

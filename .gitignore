@@ -1,51 +1,25 @@
-# Node modules
-node_modules/
-
-# pnpm lock file (optional to ignore, but usually committed)
-.pnpm-debug.log*
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Root level gitignore - specific files handled by backend/ and frontend/ .gitignore files
 
 # OS-specific files
 .DS_Store
 Thumbs.db
-.vscode/
 
-# Environment variables
+# Environment variables (root level)
 .env
 .env.local
 .env.*.local
 
-# IDEs/editors
+# IDEs/editors (root level)
 .vscode/
 .idea/
-*.sublime-project
-*.sublime-workspace
 
-# Build output
-dist/
-build/
-coverage/
+# Logs (if any at root level)
+*.log
 
-# Optional npm cache directory
-.npm/
+# Docker compose overrides
+docker-compose.override.yml
 
-# Optional pnpm store directory
-.pnpm-store/
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Docker files
-*.container
-*.pid
-*.seed
-*.pid.lock
-
-# Optional: Ignore output from testing tools
-coverage/
+# Temporary files
+*.tmp
+*.temp
+node_modules
