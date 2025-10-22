@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 import mongoose, { Schema } from "mongoose";
 import validator from "validator";
-import { Role } from "../enum/role";
+import { Roles } from "../constants/role";
 import 'dotenv/config';
 
 const userSchema = new Schema({
@@ -125,8 +125,8 @@ const userSchema = new Schema({
     passwordChangedAt: Date,
     role: {
         type: String,
-        enum: Object.values(Role),
-        default: Role.User,
+        enum: Object.values(Roles),
+        default: Roles.User,
         required: true
     },
     active: {
